@@ -5,7 +5,7 @@ import  styles  from './popularjobs.style';
 import { COLORS, FONT, SIZES } from '../../../constants';
 
 import  PopularJobCard  from '../../common/cards/popular/PopularJobCard'; 
-
+import useFetch from '../../../hooks/useFetch';
 
 const Popularjobs = () => {
   const router  = useRouter();

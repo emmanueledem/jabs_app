@@ -9,25 +9,23 @@ import useFetch from '../../../hooks/useFetch';
 
 const Popularjobs = () => {
   const router  = useRouter();
-  const isLoading = false;
-  const error = false;
+  const{data, isLoading, error} = useFetch('search',{query:'React Developer', num_pages:1})
   return (
     <View >
     <View style={ styles.container}>
     <View style={ styles.header}>
-      <Text style={ styles.headerTitle} >Popularjobs</Text>
+      <Text style={ styles.headerTitle}>Popularjobs</Text>
       <TouchableOpacity>
         <Text style={styles.headerBtn}>Show All</Text>
       </TouchableOpacity>
     </View>
-
+    
       <View style={styles.cardsContainer}>
-     { isLoading? <ActivityIndicator/> : error ?  <Text>Sorry Something went wrong</Text>:<FlatList data={[1,2,3,4]} 
+     { isLoading? <ActivityIndicator/> : error ?  <Text>Sorry Something went wrong</Text>:<FlatList data={data}
      renderItem={({item})=>(
           <TouchableOpacity>
-          <PopularJobCard item={item.class}/>
+          <PopularJobCard item={item}/>
           </TouchableOpacity>
-          
      )}
      keyExtractor={item =>item?.jobId}
      contentContainerStyle={{columnGap:SIZES.medium}}

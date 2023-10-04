@@ -1,16 +1,17 @@
 import axios from "axios";
 import { useState , useEffect} from "react";
+import {APIKEY} from  'react-native-dotenv';
 
 const UseFetch = (endpoint, query) => {
     const [data, setData] = useState([]);
    const [isLoading, setIsLoading] = useState(false);
    const [error, setError] = useState(null);
-//    const endpoint = endpoint
    const options = {
     method: 'GET',
     url: 'https://jsearch.p.rapidapi.com/'+endpoint,
     headers: {
-        'X-RapidAPI-Key': '27fbaed518mshea6ad729e89db09p12d519jsn876dadf9997d',
+        'X-RapidAPI-Key': APIKEY,
+        // 'X-RapidAPI-Key': '27fbaed518mshea6ad729e89db09p12d519jsn876dadf9997d',
         'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
       },
     params: {...query}

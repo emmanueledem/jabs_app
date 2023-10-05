@@ -14,7 +14,6 @@ const UseFetch = (endpoint, query) => {
         'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
       },
     params: {...query}
-   
   };
 
   const fetchData = async () => {

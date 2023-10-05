@@ -7,7 +7,16 @@
     "plugins": [
       "expo-router"
     ],
+    "splash": {
+      "image": "assets/images/appImage.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#FFFFFF"
+      
+    },
     "name": "jobs_app",
     "slug": "jobs_app"
   }
 }
+
+
+

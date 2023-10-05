@@ -13,10 +13,7 @@ const PopularJobCard = ({item, selectedJob, handleCardPress}) => {
       
       }} resizeMode='contain' style={styles.logoImage}/>
      </TouchableOpacity>
-     <View style={styles.test}>
      <Text style={styles.companyName} numberOfLines={1}>{item.employer_name}</Text>
-     <Text style={styles.companyName} numberOfLines={1}>{item.employer_name}</Text>
-     </View>
         <View style={styles.infoContainer}>
             <Text style={styles.jobName(selectedJob, item)} numberOfLines={1}>{item.job_title}</Text>
             <Text styles={styles.location}>{item.job_country }</Text>
